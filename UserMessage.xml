@@ -5,7 +5,7 @@
     <single id="fromL" type="Q"/>
     <single id="toH" type="Q"/>
     <single id="toL" type="Q"/>
-    <single id="authentication" type="16b"/>
+    <single id="authentication" type="16s"/>
     <block id="messageBlock" mode="AES/CBC/PKCS5Padding" keyId="CLIENT_CLIENT" sizeType="I" >
         <single id="time" type="Q"/>
         <single id="messageId" type="H"/>
