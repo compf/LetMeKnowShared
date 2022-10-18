@@ -2,7 +2,10 @@
 <block mode="plain" id="wholeMessage" sizeType="I" hashType="SHA-256" messageType="SignUpMessage" typePrefix="&lt;">
     <single id="messageType" type="H"/>
     <single id="time" type="Q"/>
-    <block id="messageBlock" mode="RSA" decryptKeyId="SERVER_PRIVATE" encryptKeyId="SERVER_PUBLIC" sizeType="I" >
+    <block  mode="RSA" decryptKeyId="SERVER_PRIVATE" encryptKeyId="SERVER_PUBLIC" sizeType="I">
+        <single id="DECRYPTION_KEY" type="128s"/>
+    </block>
+    <block id="messageBlock" mode="AES/CBC/PKCS5Padding" decryptKeyId="DECRYPTION_KEY"  sizeType="I" >
         <single id="userName" type="128s"/>
         <single id="authentication" type="128s"/>
     </block>
