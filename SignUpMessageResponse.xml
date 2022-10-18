@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<block mode="plain" id="wholeMessage" sizeType="I" hashType="SHA-256" messageType="SignUpMessageResponse" typePrefix="&lt;">
+    <single id="messageType" type="H"/>
+    <single id="time" type="Q"/>
+    <block id="messageBlock" mode="AES" encryptKeyId="USER_PASSWORD"  sizeType="I" >
+        <single id="userH" type="Q"/>
+        <single id="userL" type="Q"/>
+    </block>
+</block>
